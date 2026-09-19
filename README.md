@@ -11,17 +11,8 @@ A 3-state Moore FSM in Verilog that cycles **RED → GREEN → YELLOW**, impleme
 - Self-checking flow: simulated in Questa, constrained with SDC, verified on hardware
 
 ## State Diagram
-```mermaid
-stateDiagram-v2
-    [*] --> S0: rst
-    S0 --> S1: tick
-    S1 --> S2: tick
-    S2 --> S0: tick
-    S0: S0 - RED (100)
-    S1: S1 - GREEN (010)
-    S2: S2 - YELLOW (001)
-```
 
+![State_diagram](docs/State_diagram.jpeg)
 ## Design Details
 | Item | Value |
 |---|---|
@@ -71,7 +62,7 @@ run -all
 
 Expected output: `100 → 010 → 001 → 100`, changing every 100 ns.
 
-![Waveform](docs/waveform.png)
+![Waveform](docs/Waveform.png)
 
 ## Timing Constraints
 `cyclic_lamp.sdc` defines the 20 ns (50 MHz) clock and sets false paths on the slow switch and LED I/O.
