@@ -12,7 +12,9 @@ A 3-state Moore FSM in Verilog that cycles **RED → GREEN → YELLOW**, impleme
 
 ## State Diagram
 
-![State_diagram](docs/State_diagram.jpeg)
+<img width="1600" height="1234" alt="State_digram" src="https://github.com/user-attachments/assets/af4dd481-053e-4379-b73e-0830496022de" />
+
+
 ## Design Details
 | Item | Value |
 |---|---|
@@ -62,7 +64,9 @@ run -all
 
 Expected output: `100 → 010 → 001 → 100`, changing every 100 ns.
 
-![Waveform](docs/Waveform.png)
+<img width="1881" height="285" alt="Waveform" src="https://github.com/user-attachments/assets/7652dae1-d6c2-4f06-955f-2625a0569010" />
+
+
 
 ## Timing Constraints
 `cyclic_lamp.sdc` defines the 20 ns (50 MHz) clock and sets false paths on the slow switch and LED I/O.
